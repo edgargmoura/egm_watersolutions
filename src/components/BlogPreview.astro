@@ -1,0 +1,69 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+const articles = [
+  {
+    title: "Como a IoT está revolucionando o monitoramento de qualidade da água",
+    excerpt: "Sensores conectados permitem monitoramento em tempo real e tomadas de decisão mais eficientes para preservação de recursos hídricos.",
+    date: "15 de Junho, 2025",
+    image: "https://images.pexels.com/photos/8853537/pexels-photo-8853537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "Tecnologia",
+    url: "/blog/iot-monitoramento-agua"
+  },
+  {
+    title: "Biofiltros: a solução natural para tratamento de efluentes industriais",
+    excerpt: "Sistemas de biofiltração combinam eficiência de tratamento com baixo custo operacional e mínimo impacto ambiental.",
+    date: "02 de Junho, 2025",
+    image: "https://images.pexels.com/photos/4439547/pexels-photo-4439547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "Sustentabilidade",
+    url: "/blog/biofiltros-efluentes-industriais"
+  },
+  {
+    title: "Novas regulamentações para estações de tratamento: o que você precisa saber",
+    excerpt: "Mudanças recentes na legislação ambiental impactam operações de tratamento de água e esgoto. Entenda como se adequar.",
+    date: "28 de Maio, 2025",
+    image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    category: "Legislação",
+    url: "/blog/regulamentacoes-estacoes-tratamento"
+  }
+];
+---
+
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <SectionHeading 
+      title="Centro de Conhecimento" 
+      subtitle="Compartilhamos conhecimento técnico e insights sobre tendências em engenharia ambiental e saneamento"
+      centered={true}
+    />
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      {articles.map((article, index) => (
+        <a href={article.url} class="group" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col border border-gray-100">
+            <div class="relative h-48">
+              <img 
+                src={article.image} 
+                alt={article.title} 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <span class="absolute top-3 left-3 bg-primary-500 text-white text-xs px-2 py-1 rounded">
+                {article.category}
+              </span>
+            </div>
+            
+            <div class="p-6 flex-grow">
+              <p class="text-sm text-gray-500 mb-2">{article.date}</p>
+              <h3 class="text-xl font-semibold mb-3 text-gray-900 group-hover:text-primary-600 transition-colors">
+                {article.title}
+              </h3>
+              <p class="text-gray-600">
+                {article.excerpt}
+              </p>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

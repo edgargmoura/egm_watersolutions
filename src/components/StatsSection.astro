@@ -1,0 +1,21 @@
+---
+const stats = [
+  { value: "250+", label: "Projetos Concluídos" },
+  { value: "15+", label: "Anos de Experiência" },
+  { value: "45+", label: "Profissionais Especializados" },
+  { value: "30+", label: "Tecnologias Proprietárias" }
+];
+---
+
+<section class="bg-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
+      {stats.map((stat, index) => (
+        <div class="text-center" data-aos="fade-up" data-aos-delay={index * 100}>
+          <p class="text-3xl md:text-4xl font-bold text-primary-600 mb-2">{stat.value}</p>
+          <p class="text-gray-600">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

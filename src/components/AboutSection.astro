@@ -1,0 +1,46 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1" data-aos="fade-right">
+        <span class="inline-block px-3 py-1 rounded-full bg-secondary-100 text-secondary-700 text-sm font-medium mb-5">
+          Quem Somos
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Engenharia de ponta com compromisso socioambiental</h2>
+        <p class="text-gray-600 mb-6 text-lg">
+          A EGM Water Solutions nasceu da visão do engenheiro sanitarista Edgar Moura, combinando experiência técnica, inovação tecnológica e compromisso com a sustentabilidade para criar soluções de engenharia que realmente fazem diferença.
+        </p>
+        <p class="text-gray-600 mb-8">
+          Nossa equipe multidisciplinar trabalha na interseção entre engenharia, tecnologia e meio ambiente para desenvolver projetos que não apenas atendem às necessidades atuais, mas também preservam recursos para as futuras gerações.
+        </p>
+        
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <p class="text-3xl font-bold text-primary-500 mb-1">15+</p>
+            <p class="text-gray-600">Anos de experiência</p>
+          </div>
+        </div>
+        
+        <Button href="/quem-somos" variant="primary">Conheça Nossa História</Button>
+      </div>
+      
+      <div class="relative order-1 md:order-2" data-aos="fade-left">
+        <img 
+          src="/engenheiros.png" 
+          alt="Engenheiros em estação de tratamento" 
+          class="rounded-lg shadow-xl w-full"
+        />
+        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+          <img 
+            src="/torneira.png" 
+            alt="Detalhe de torneira" 
+            class="rounded w-32 h-32 object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

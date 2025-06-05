@@ -1,0 +1,50 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import TestimonialCard from './TestimonialCard.astro';
+
+const testimonials = [
+  {
+    quote: "A consultoria da EcoEngenharia foi fundamental para otimizarmos nosso sistema de tratamento de efluentes, reduzindo custos operacionais em 30% e garantindo conformidade ambiental.",
+    author: "Maria Silva",
+    role: "Diretora de Operações",
+    company: "Indústria Têxtil Sustentex",
+    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    quote: "A implementação do sistema de automação e monitoramento remoto desenvolvido pela equipe do Edgar revolucionou nossa gestão de recursos hídricos, permitindo decisões baseadas em dados em tempo real.",
+    author: "Carlos Mendes",
+    role: "Secretário de Meio Ambiente",
+    company: "Prefeitura de Austin",
+    image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    quote: "Os treinamentos técnicos oferecidos pela EcoEngenharia prepararam nossa equipe para gerenciar com excelência nossa estação de tratamento, resultando em operação mais eficiente e sustentável.",
+    author: "Ana Ferreira",
+    role: "Gerente de Sustentabilidade",
+    company: "Construtora GreenBuild",
+    image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  }
+];
+---
+
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <SectionHeading 
+      title="O Que Nossos Clientes Dizem" 
+      subtitle="Trabalhamos em parceria com empresas e instituições que valorizam a sustentabilidade e a excelência técnica"
+      centered={true}
+    />
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      {testimonials.map((testimonial, index) => (
+        <TestimonialCard
+          quote={testimonial.quote}
+          author={testimonial.author}
+          role={testimonial.role}
+          company={testimonial.company}
+          image={testimonial.image}
+        />
+      ))}
+    </div>
+  </div>
+</section>
