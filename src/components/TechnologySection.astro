@@ -5,22 +5,22 @@ const technologies = [
   {
     title: "Internet das Coisas (IoT)",
     description: "Sensores inteligentes para monitoramento em tempo real de parâmetros de qualidade da água e eficiência operacional.",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>'
+    image: "https://images.pexels.com/photos/8853537/pexels-photo-8853537.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
   },
   {
     title: "Inteligência Artificial",
     description: "Algoritmos avançados que otimizam processos de tratamento e predizem necessidades de manutenção preventiva.",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>'
+    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
   },
   {
     title: "Biofiltração Avançada",
     description: "Sistemas naturais potencializados por tecnologia para tratamento eficiente e de baixo impacto ambiental.",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>'
+    image: "https://images.pexels.com/photos/4439547/pexels-photo-4439547.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
   },
   {
     title: "Energia Renovável Integrada",
     description: "Sistemas de energia solar e recuperação energética que tornam estações de tratamento autossuficientes.",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>'
+    image: "https://images.pexels.com/photos/9875414/pexels-photo-9875414.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
   }
 ];
 ---
@@ -35,13 +35,20 @@ const technologies = [
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
       {technologies.map((tech, index) => (
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay={index * 100}>
-          <div class="w-16 h-16 rounded-lg bg-primary-100 flex items-center justify-center mb-5 text-primary-500">
-            <Fragment set:html={tech.icon} />
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src={tech.image} 
+              alt={tech.title} 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-primary-600/20"></div>
           </div>
           
-          <h3 class="text-xl font-semibold mb-3 text-gray-900">{tech.title}</h3>
-          <p class="text-gray-600">{tech.description}</p>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">{tech.title}</h3>
+            <p class="text-gray-600">{tech.description}</p>
+          </div>
         </div>
       ))}
     </div>

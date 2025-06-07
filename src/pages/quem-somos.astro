@@ -61,8 +61,8 @@ import Button from '../components/Button.astro';
           />
           <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
             <img 
-              src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-              alt="Laboratório da Water TechSol" 
+              src="/torneira.png" 
+              alt="Detalhe de torneira" 
               class="rounded w-32 h-32 object-cover"
             />
           </div>
@@ -81,69 +81,87 @@ import Button from '../components/Button.astro';
       />
       
       <div class="grid md:grid-cols-3 gap-8 mt-12">
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100" data-aos="fade-up">
-          <div class="w-14 h-14 rounded-lg bg-primary-100 flex items-center justify-center mb-6 text-primary-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-            </svg>
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100" data-aos="fade-up">
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" 
+              alt="Missão - Estação de tratamento" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-primary-600/20"></div>
           </div>
-          <h3 class="text-xl font-semibold mb-4 text-gray-900">Missão</h3>
-          <p class="text-gray-600">
-            Desenvolver e implementar soluções de engenharia inovadoras e sustentáveis que promovam o acesso universal ao saneamento básico e preservem os recursos naturais para as futuras gerações.
-          </p>
+          
+          <div class="p-8">
+            <h3 class="text-xl font-semibold mb-4 text-gray-900">Missão</h3>
+            <p class="text-gray-600">
+              Desenvolver e implementar soluções de engenharia inovadoras e sustentáveis que promovam o acesso universal ao saneamento básico e preservem os recursos naturais para as futuras gerações.
+            </p>
+          </div>
         </div>
         
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-14 h-14 rounded-lg bg-primary-100 flex items-center justify-center mb-6 text-primary-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" 
+              alt="Visão - Laboratório de análise" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-primary-600/20"></div>
           </div>
-          <h3 class="text-xl font-semibold mb-4 text-gray-900">Visão</h3>
-          <p class="text-gray-600">
-            Ser referência global em engenharia sanitária e ambiental, reconhecida pela excelência técnica, inovação tecnológica e pelo impacto positivo de nossas soluções na qualidade de vida das comunidades e na preservação do meio ambiente.
-          </p>
+          
+          <div class="p-8">
+            <h3 class="text-xl font-semibold mb-4 text-gray-900">Visão</h3>
+            <p class="text-gray-600">
+              Ser referência global em engenharia sanitária e ambiental, reconhecida pela excelência técnica, inovação tecnológica e pelo impacto positivo de nossas soluções na qualidade de vida das comunidades e na preservação do meio ambiente.
+            </p>
+          </div>
         </div>
         
-        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-14 h-14 rounded-lg bg-primary-100 flex items-center justify-center mb-6 text-primary-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-            </svg>
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative h-48 overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" 
+              alt="Valores - Equipe trabalhando" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-primary-600/20"></div>
           </div>
-          <h3 class="text-xl font-semibold mb-4 text-gray-900">Valores</h3>
-          <ul class="text-gray-600 space-y-2">
-            <li class="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-              Excelência Técnica
-            </li>
-            <li class="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-              Inovação Contínua
-            </li>
-            <li class="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-              Responsabilidade Socioambiental
-            </li>
-            <li class="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-              Integridade e Ética
-            </li>
-            <li class="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-              Compromisso com Resultados
-            </li>
-          </ul>
+          
+          <div class="p-8">
+            <h3 class="text-xl font-semibold mb-4 text-gray-900">Valores</h3>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Excelência Técnica
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Inovação Contínua
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Responsabilidade Socioambiental
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Integridade e Ética
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Compromisso com Resultados
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
