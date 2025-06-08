@@ -5,22 +5,17 @@ const technologies = [
   {
     title: "Internet das Coisas (IoT)",
     description: "Sensores inteligentes para monitoramento em tempo real de parâmetros de qualidade da água e eficiência operacional.",
-    image: "https://images.pexels.com/photos/8853537/pexels-photo-8853537.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
-  },
-  {
-    title: "Inteligência Artificial",
-    description: "Algoritmos avançados que otimizam processos de tratamento e predizem necessidades de manutenção preventiva.",
-    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
+    image: "https://images.pexels.com/photos/8853537/pexels-photo-8853537.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&dpr=1"
   },
   {
     title: "Biofiltração Avançada",
     description: "Sistemas naturais potencializados por tecnologia para tratamento eficiente e de baixo impacto ambiental.",
-    image: "https://images.pexels.com/photos/4439547/pexels-photo-4439547.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
+    image: "https://images.pexels.com/photos/4439547/pexels-photo-4439547.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&dpr=1"
   },
   {
     title: "Energia Renovável Integrada",
     description: "Sistemas de energia solar e recuperação energética que tornam estações de tratamento autossuficientes.",
-    image: "https://images.pexels.com/photos/9875414/pexels-photo-9875414.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1"
+    image: "https://images.pexels.com/photos/9875414/pexels-photo-9875414.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&dpr=1"
   }
 ];
 ---
@@ -33,10 +28,10 @@ const technologies = [
       centered={true}
     />
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
       {technologies.map((tech, index) => (
         <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay={index * 100}>
-          <div class="relative h-48 overflow-hidden">
+          <div class="relative h-24 overflow-hidden">
             <img 
               src={tech.image} 
               alt={tech.title} 
