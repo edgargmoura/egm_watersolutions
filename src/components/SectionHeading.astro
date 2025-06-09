@@ -16,9 +16,9 @@ const {
 const alignment = centered ? 'text-center mx-auto' : '';
 ---
 
-<div class={`max-w-3xl mb-12 ${alignment} ${className}`} data-aos="fade-up">
-  <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">{title}</h2>
+<div class={`max-w-3xl mb-12 text-center mx-auto ${alignment} ${className}`} data-aos="fade-up">
+  <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 text-center">{title}</h2>
   {subtitle && 
-    <p class="text-xl text-gray-600 leading-relaxed">{subtitle}</p>
+    <p class="text-xl text-gray-600 leading-relaxed text-center">{subtitle}</p>
   }
 </div>

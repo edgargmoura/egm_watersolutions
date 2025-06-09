@@ -1,0 +1,22 @@
+---
+export interface Props {
+  color?: string;
+  class?: string;
+}
+
+const { 
+  color = "currentColor",
+  class: className = ""
+} = Astro.props;
+---
+
+<!-- Wave design at the bottom -->
+<div class={`absolute bottom-0 left-0 right-0 text-white ${className}`}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" class="w-full h-auto">
+    <path 
+      fill={color}
+      fill-opacity="1" 
+      d="M0,128L80,117.3C160,107,320,85,480,90.7C640,96,800,128,960,128C1120,128,1280,96,1360,80L1440,64L1440,160L1360,160C1280,160,1120,160,960,160C800,160,640,160,480,160C320,160,160,160,80,160L0,160Z"
+    ></path>
+  </svg>
+</div>
