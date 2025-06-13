@@ -7,37 +7,43 @@ const services = [
     title: 'Consultoria Ambiental',
     description: 'Análises, diagnósticos e recomendações especializadas para conformidade ambiental e otimização de recursos.',
     image: '/consultoria_ambiental.png',
-    url: '/servicos#consultoria'
+    url: '/servicos#consultoria',
+    highlight: 'primary'
   },
   {
     title: 'Projetos de Infraestrutura',
     description: 'Planejamento, execução e gestão de projetos de infraestrutura com foco em sustentabilidade e eficiência.',
     image: '/projetos_infraestrutura.png',
-    url: '/servicos#infraestrutura'
+    url: '/servicos#infraestrutura',
+    highlight: 'secondary'
   },
   {
     title: 'Tecnologias Verdes',
     description: 'Desenvolvimento e implementação de tecnologias sustentáveis como biofiltração, reúso de água e energia renovável.',
     image: '/tecnologias_verdes.png',
-    url: '/servicos#tecnologias'
+    url: '/servicos#tecnologias',
+    highlight: 'accent'
   },
   {
     title: 'Educação e Treinamentos',
     description: 'Programas educacionais, workshops e cursos especializados em saneamento e engenharia ambiental.',
     image: 'https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&dpr=1',
-    url: '/educacao'
+    url: '/educacao',
+    highlight: 'primary'
   },
   {
     title: 'Pesquisa & Desenvolvimento',
     description: 'Inovações em tratamento de água e esgoto, com foco em eficiência energética e sustentabilidade.',
     image: 'https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=200&h=150&dpr=1',
-    url: '/servicos#pesquisa'
+    url: '/servicos#pesquisa',
+    highlight: 'secondary'
   },
   {
     title: 'Automação e Monitoramento',
     description: 'Sistemas inteligentes com IoT para monitoramento remoto e controle eficiente de estações de tratamento.',
     image: '/automação_monitoramento.png',
-    url: '/servicos#automacao'
+    url: '/servicos#automacao',
+    highlight: 'accent'
   },
 ];
 ---
@@ -57,6 +63,7 @@ const services = [
           description={service.description}
           image={service.image}
           url={service.url}
+          highlight={service.highlight}
         />
       ))}
     </div>

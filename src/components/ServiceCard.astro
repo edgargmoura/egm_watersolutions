@@ -3,13 +3,22 @@ export interface Props {
   title: string;
   description: string;
   image: string;
+  highlight?: 'primary' | 'secondary' | 'accent';
 }
 
-const { title, description, image } = Astro.props;
+const { title, description, image, highlight = 'primary' } = Astro.props;
+
+const highlightColors = {
+  primary: 'border-primary-500 bg-primary-50',
+  secondary: 'border-secondary-500 bg-secondary-50',
+  accent: 'border-accent-500 bg-accent-50'
+};
+
+const highlightClass = highlightColors[highlight];
 ---
 
 <div 
-  class="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
+  class={`group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border-l-4 ${highlightClass}`}
   data-aos="fade-up"
 >
   <div class="relative h-32 overflow-hidden flex items-center justify-center">

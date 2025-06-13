@@ -39,7 +39,7 @@ const articles = [
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
       {articles.map((article, index) => (
-        <a href={article.url} class="group" data-aos="fade-up" data-aos-delay={index * 100}>
+        <a href={article.url} target="_blank" rel="noopener noreferrer" class="group" data-aos="fade-up" data-aos-delay={index * 100}>
           <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col border border-gray-100">
             <div class="relative h-48">
               <img 
