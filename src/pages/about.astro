@@ -1,0 +1,247 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Button from '../components/Button.astro';
+import WaveBotton from '../components/WaveBotton.astro';
+---
+
+<Layout 
+  title="About Us | EGM Water TechSol"
+  description="Learn about EGM Water TechSol: our history, mission, and the team of specialists led by Edgar Moura."
+>
+  <!-- Hero Section -->
+  <section class="bg-gray-900 text-white py-24 relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="/quem_somos.png" 
+        alt="Engineers working" 
+        class="w-full h-full object-cover"
+        style="object-position: center 35%;"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-800/70 to-primary-800/70"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 md:py-36">
+      <div class="max-w-3xl" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
+        <p class="text-xl text-gray-300">
+          A team committed to technical excellence and sustainable transformation through environmental engineering.
+        </p>
+      </div>
+    </div>
+    <WaveBotton class="absolute bottom-0 left-0 right-0 text-white" />
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <SectionHeading 
+            title="Our Story" 
+            subtitle="From a dream of transformation to the reality of positive impact"
+          />
+          
+          <p class="text-gray-600 mb-6">
+            Founded by Edgar Moura, a chemist and postgraduate in environmental engineering and basic sanitation with solid experience in environmental sanitation and water systems management, EGM Water TechSol was born with the mission to transform the relationship between urban development and sustainability.
+          </p>
+          
+          <p class="text-gray-600 mb-6">
+            Based in Austin, Texas, EGM Water TechSol offers integrated and innovative solutions in environmental engineering, operating in the areas of technical consulting, green technology development, sanitation system automation, project management, professional education, and applied research.
+          </p>
+          
+          <p class="text-gray-600 mb-6">
+            Our commitment is to deliver technical excellence combined with positive impact. We believe that urban advancement must go hand in hand with respect for the environment, promoting operational efficiency, water quality, and public health.
+          </p>
+
+          <p class="text-gray-600 mb-6">
+            We have a multidisciplinary team formed by environmental engineers, environmental sanitation representatives, instructors, and technology specialists, prepared to work on projects of different scales and complexities. Our work ranges from technical diagnosis to implementation and maintenance of sustainable solutions for water and sewage systems.
+          </p>
+
+          <p class="text-gray-600 mb-6">
+            EGM Water TechSol is more than a service provider — it's a strategic partner for companies, governments, and communities that believe in a cleaner, more efficient, and resilient future.
+          </p>
+        </div>
+        
+        <div class="relative" data-aos="fade-left">
+          <img 
+            src="/medidores.png" 
+            alt="Water meters" 
+            class="rounded-lg shadow-xl w-full"
+          />
+          <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+            <img 
+              src="/torneira.png" 
+              alt="Faucet detail" 
+              class="rounded w-32 h-32 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Mission and Values -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading 
+        title="Mission and Values" 
+        subtitle="The principles that guide our work and commitment"
+        centered={true}
+      />
+      
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <!-- Mission -->
+        <div class="bg-white rounded-xl p-8 shadow-sm border-l-4 border-primary-500 hover:shadow-md transition-shadow duration-300" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-primary-600">Mission</h3>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            To develop and implement innovative and sustainable engineering solutions that promote universal access to basic sanitation and preserve natural resources for future generations.
+          </p>
+        </div>
+        
+        <!-- Vision -->
+        <div class="bg-white rounded-xl p-8 shadow-sm border-l-4 border-secondary-500 hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 rounded-lg bg-secondary-100 flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-secondary-600">Vision</h3>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            To be a global reference in sanitary and environmental engineering, recognized for technical excellence, technological innovation, and the positive impact of our solutions on community quality of life and environmental preservation.
+          </p>
+        </div>
+        
+        <!-- Values -->
+        <div class="bg-white rounded-xl p-8 shadow-sm border-l-4 border-accent-500 hover:shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 rounded-lg bg-accent-100 flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-accent-600">Values</h3>
+          </div>
+          <ul class="text-gray-700 space-y-3">
+            <li class="flex items-start">
+              <div class="w-2 h-2 rounded-full bg-accent-500 mr-3 mt-2 flex-shrink-0"></div>
+              <span>Technical Excellence</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-2 h-2 rounded-full bg-accent-500 mr-3 mt-2 flex-shrink-0"></div>
+              <span>Continuous Innovation</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-2 h-2 rounded-full bg-accent-500 mr-3 mt-2 flex-shrink-0"></div>
+              <span>Social and Environmental Responsibility</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-2 h-2 rounded-full bg-accent-500 mr-3 mt-2 flex-shrink-0"></div>
+              <span>Integrity and Ethics</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-2 h-2 rounded-full bg-accent-500 mr-3 mt-2 flex-shrink-0"></div>
+              <span>Commitment to Results</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Team Section - Founder -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeading 
+        title="Our Leadership" 
+        subtitle="Meet the founder behind EGM Water TechSol"
+        centered={true}
+      />
+      
+      <div class="mt-12 grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+        <div>
+          <img 
+            src="https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            alt="Edgar Moura, Founder and CEO" 
+            class="rounded-lg shadow-md w-full"
+          />
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Edgar Moura</h3>
+          <p class="text-primary-600 font-medium mb-6">Founder and CEO</p>
+          
+          <p class="text-gray-600 mb-4">
+            With over 15 years of experience in water treatment and supply processes and in developing innovative solutions for industrial water treatment.
+          </p>
+          
+          <p class="text-gray-600 mb-4">
+            Graduated from the renowned University of Mogi das Cruzes (UMC) in São Paulo and postgraduate in Environmental Engineering and Basic Sanitation, Edgar combines a solid academic foundation with extensive practical experience in infrastructure projects in various contexts.
+          </p>
+          
+          <p class="text-gray-600 mb-6">
+            Author of an interdisciplinary scientific article in biotechnology and environmental engineering, he is recognized for his approach that integrates technical rigor, technological innovation, and social sensitivity in each developed project.
+          </p>
+          
+          <div class="flex space-x-4 mb-6">
+            <a 
+              href="https://www.linkedin.com/in/edgar-moura/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium text-sm transition-colors duration-200"
+            >
+              <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+            
+            <a 
+              href="https://www.editoraunisv.com.br/post/biodegradacao-do-polihidroxibutirato-em-ambientes-diversos-desafios-para-uma-producao-sustentavel?utm_source=so&cid=17bd406f-02b6-4008-93a1-1020e4347e99&utm_content=78f3d4c5-efa2-418a-972f-e49f12ac86c2&postId=9a1a7a90-09a3-4f8f-ad66-65faf531bd59&utm_campaign=76ed2595-fdb0-482c-bb4b-4e9788093b8c&utm_medium=mail" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-md font-medium text-sm transition-colors duration-200"
+            >
+              <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              Scientific Publication
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="bg-primary-600 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-6" data-aos="fade-up">
+        Let's work together for a more sustainable future
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Learn more about our projects and discover how we can help your company or community with personalized environmental engineering solutions.
+      </p>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <Button 
+          href="/contact" 
+          variant="outline"
+          size="lg"
+          class="border-white text-white hover:bg-white hover:text-primary-600 font-medium"
+        >
+          Contact Us
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

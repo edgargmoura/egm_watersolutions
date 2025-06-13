@@ -3,22 +3,28 @@ export interface Props {
   title: string;
   description: string;
   image: string;
-  highlight?: 'primary' | 'secondary' | 'accent';
+  url: string;
+  highlight?: 'gray' | 'slate' | 'zinc' | 'stone' | 'neutral';
 }
 
-const { title, description, image, highlight = 'primary' } = Astro.props;
+const { title, description, image, url, highlight = 'gray' } = Astro.props;
 
 const highlightColors = {
-  primary: 'border-primary-500 bg-primary-50',
-  secondary: 'border-secondary-500 bg-secondary-50',
-  accent: 'border-accent-500 bg-accent-50'
+  gray: 'border-gray-300 bg-gray-50/30',
+  slate: 'border-slate-300 bg-slate-50/30',
+  zinc: 'border-zinc-300 bg-zinc-50/30',
+  stone: 'border-stone-300 bg-stone-50/30',
+  neutral: 'border-neutral-300 bg-neutral-50/30'
 };
 
 const highlightClass = highlightColors[highlight];
 ---
 
-<div 
-  class={`group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border-l-4 ${highlightClass}`}
+<a 
+  href={url} 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class={`group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border-l-2 ${highlightClass}`}
   data-aos="fade-up"
 >
   <div class="relative h-32 overflow-hidden flex items-center justify-center">
@@ -38,4 +44,4 @@ const highlightClass = highlightColors[highlight];
       {description}
     </p>
   </div>
-</div>
+</a>
