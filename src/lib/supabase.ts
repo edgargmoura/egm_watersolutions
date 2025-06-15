@@ -7,7 +7,13 @@ if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables')
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    autoRefreshToken: false,
+    persistSession: false,
+    detectSessionInUrl: false
+  }
+})
 
 export interface ContactSubmission {
   name: string
@@ -20,6 +26,7 @@ export interface ContactSubmission {
 
 export async function submitContactForm(data: ContactSubmission) {
   try {
+    // Ensure we're using the anonymous context
     const { data: result, error } = await supabase
       .from('contact_submissions')
       .insert([{
