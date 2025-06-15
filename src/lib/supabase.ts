@@ -37,7 +37,6 @@ export async function submitContactForm(data: ContactSubmission) {
         service_interest: data.service_interest || null,
         message: data.message || null
       }])
-      .select()
 
     if (error) {
       console.error('Supabase error:', error)
