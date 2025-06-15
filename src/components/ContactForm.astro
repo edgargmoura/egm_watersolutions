@@ -171,13 +171,14 @@
           const privacy = formData.get('privacy');
           
           if (!name || !email) {
-            throw new Error('Please fill in all required fields.');
+            throw new Error('Please fill in all required fields (Name and Email).');
           }
           
           if (!privacy) {
             throw new Error('You must accept the Privacy Policy to continue.');
           }
           
+          // Prepare data for submission
           const data = {
             name: name.trim(),
             email: email.trim(),
@@ -189,6 +190,7 @@
 
           console.log('Submitting form data:', data);
           
+          // Submit to Supabase
           const result = await submitContactForm(data);
           console.log('Form submitted successfully:', result);
           
@@ -201,8 +203,8 @@
           
         } catch (error) {
           console.error('Error submitting form:', error);
-          const errorMessage = error instanceof Error ? error.message : 'There was an error submitting your form. Please try again.';
-          errorText.textContent = errorMessage;
+          const errorMessageText = error instanceof Error ? error.message : 'There was an error submitting your form. Please try again.';
+          errorText.textContent = errorMessageText;
           errorMessage.classList.remove('hidden');
           
           // Scroll to error message
