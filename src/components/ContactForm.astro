@@ -137,9 +137,10 @@
 </div>
 
 <script>
-  import { submitContactForm } from '../lib/supabase.ts';
-
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', async () => {
+    // Import the submitContactForm function
+    const { submitContactForm } = await import('../lib/supabase.ts');
+    
     const form = document.getElementById('contact-form') as HTMLFormElement;
     const submitButton = document.getElementById('submit-button') as HTMLButtonElement;
     const submitText = document.getElementById('submit-text') as HTMLSpanElement;
@@ -163,16 +164,33 @@
         
         try {
           const formData = new FormData(form);
+          
+          // Validate required fields
+          const name = formData.get('name') as string;
+          const email = formData.get('email') as string;
+          const privacy = formData.get('privacy');
+          
+          if (!name || !email) {
+            throw new Error('Please fill in all required fields.');
+          }
+          
+          if (!privacy) {
+            throw new Error('You must accept the Privacy Policy to continue.');
+          }
+          
           const data = {
-            name: formData.get('name') as string,
-            email: formData.get('email') as string,
-            phone: formData.get('phone') as string || undefined,
-            company: formData.get('company') as string || undefined,
-            service_interest: formData.get('service_interest') as string || undefined,
-            message: formData.get('message') as string || undefined,
+            name: name.trim(),
+            email: email.trim(),
+            phone: (formData.get('phone') as string)?.trim() || undefined,
+            company: (formData.get('company') as string)?.trim() || undefined,
+            service_interest: (formData.get('service_interest') as string) || undefined,
+            message: (formData.get('message') as string)?.trim() || undefined,
           };
 
-          await submitContactForm(data);
+          console.log('Submitting form data:', data);
+          
+          const result = await submitContactForm(data);
+          console.log('Form submitted successfully:', result);
           
           // Show success message
           successMessage.classList.remove('hidden');
@@ -183,7 +201,8 @@
           
         } catch (error) {
           console.error('Error submitting form:', error);
-          errorText.textContent = error instanceof Error ? error.message : 'There was an error submitting your form. Please try again.';
+          const errorMessage = error instanceof Error ? error.message : 'There was an error submitting your form. Please try again.';
+          errorText.textContent = errorMessage;
           errorMessage.classList.remove('hidden');
           
           // Scroll to error message

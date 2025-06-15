@@ -3,6 +3,10 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY
 
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Missing Supabase environment variables')
+}
+
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 export interface ContactSubmission {
@@ -15,14 +19,27 @@ export interface ContactSubmission {
 }
 
 export async function submitContactForm(data: ContactSubmission) {
-  const { data: result, error } = await supabase
-    .from('contact_submissions')
-    .insert([data])
-    .select()
+  try {
+    const { data: result, error } = await supabase
+      .from('contact_submissions')
+      .insert([{
+        name: data.name,
+        email: data.email,
+        phone: data.phone || null,
+        company: data.company || null,
+        service_interest: data.service_interest || null,
+        message: data.message || null
+      }])
+      .select()
 
-  if (error) {
+    if (error) {
+      console.error('Supabase error:', error)
+      throw new Error(`Failed to submit form: ${error.message}`)
+    }
+
+    return result
+  } catch (error) {
+    console.error('Form submission error:', error)
     throw error
   }
-
-  return result
 }
