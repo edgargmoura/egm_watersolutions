@@ -12,7 +12,8 @@
             id="name" 
             name="name" 
             required
-            class="w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+            class="w-full p-4 text-base text-gray-900 placeholder-gray-400 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+
           >
         </div>
         
@@ -23,7 +24,7 @@
             id="email" 
             name="email" 
             required
-            class="w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+            class="w-full p-4 text-base text-gray-900 placeholder-gray-400 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           >
         </div>
       </div>
@@ -35,7 +36,7 @@
             type="tel" 
             id="phone" 
             name="phone" 
-            class="w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+            class="w-full p-4 text-base text-gray-900 placeholder-gray-400 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           >
         </div>
         
@@ -45,7 +46,7 @@
             type="text" 
             id="company" 
             name="company" 
-            class="w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+            class="w-full p-4 text-base text-gray-900 placeholder-gray-400 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           >
         </div>
       </div>
@@ -55,7 +56,7 @@
         <select 
           id="service" 
           name="service_interest" 
-          class="w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+          class="w-full p-4 text-base text-gray-900 placeholder-gray-400 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         >
           <option value="">Select a service</option>
           <option value="Environmental Consulting">Environmental Consulting</option>
@@ -74,7 +75,7 @@
           id="message" 
           name="message" 
           rows="4" 
-          class="w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+          class="w-full p-4 text-base text-gray-900 placeholder-gray-400 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         ></textarea>
       </div>
       
@@ -197,6 +198,11 @@
           // Show success message
           successMessage.classList.remove('hidden');
           form.reset();
+
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            successMessage.classList.add('hidden');
+          }, 5000);
           
           // Scroll to success message
           successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
